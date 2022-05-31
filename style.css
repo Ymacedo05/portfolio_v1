@@ -1,0 +1,277 @@
+
+/*  =================  Reset */
+
+:root{
+    --corTema:red;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+
+#container{
+    width: 100vw;
+    background-color: black;
+    color: white;
+}
+
+#btn{
+    display: none;
+}
+#cont_btn{
+    display: none;
+    width: 50px;
+    height: 35px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#cont_btn div{
+    height: 5px;
+    background-color: var(--corTema);
+}
+
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 12vh;
+    padding: 0 10%;
+    position: relative;
+}
+
+.logo{
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 40px;
+    color: var(--corTema);
+    font-size: 1.8em;
+}
+
+header nav ul{
+    display: flex;
+}
+
+header ul li a{
+    display: block;
+    padding: 10px;
+    margin: 5px 7px;
+    font-size: 1.2em;
+    color: white;
+    transition: color 0.5s;
+}
+
+header ul li a:hover{
+    color: var(--corTema);
+    border-top: 0.5px solid var(--corTema);
+    border-bottom: 0.5px solid var(--corTema);
+}
+
+/* =========== Ínicio Outdoor ==================*/
+
+header{
+    background: url("https://c.pxhere.com/photos/4a/d8/amazing_animal_beautiful_beautifull_bird_black_branch_breathtaking-1327745.jpg!d") no-repeat center center;
+    height: 90vh;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+header:before{
+    content: '';
+    background-color: rgba(15, 15, 20, 0.563);
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    
+}
+
+/* header::before{
+    content:"";
+    background-position: cover;
+    background-color: rgba(0, 255, 255, 0.178);
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    
+
+} */
+
+div.outdoor{
+    height:80% ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.outdoor h1{
+    font-size: 3.5em;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--corTema);
+    position: absolute;
+    top: 34vh;
+}
+div.outdoor p{
+    font-size: 1.4em;
+    position: absolute;
+}
+
+
+
+/*============ Ínicio Main ==============*/
+
+main{
+
+}
+.sobreMim{
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section #foto{
+    height: 300px;
+    border: 2px dashed white;
+    border-left: 10px solid var(--corTema);
+    width: 200px;
+    margin-right: 15%;
+}
+
+section #texto_direita{
+    width: 50%;
+    border: 2px dashed white;
+}
+
+#texto_direita h2, p{
+    margin-bottom: 25px;
+}
+
+div.separador{
+    display: flex;
+    margin-bottom:15px;
+    justify-content: space-between;
+    width: 250px;
+    background-color: #23232f;
+}
+div.separador span{
+    display: block;
+    width: 160px;
+}
+
+#texto_direita button{
+    padding: 12px;
+    background-color: var(--corTema);
+    border-radius: 20px;
+    color: rgb(244, 162, 162);
+    font-weight: 800;
+    margin-top: 7px;
+}
+
+/*================  TRABALHOS  ===============*/
+
+section.sec_trabalhos{
+    text-align: center; 
+    padding: 20px;
+}
+
+section.sec_trabalhos div.trabalhos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div.trabalhos div{
+    width: 300px;
+    height: 200px;
+    background-color: darkblue;
+    margin: 5px;
+    border: 10px solid rgb(227, 162, 162);
+}
+div.trabalhos div:hover{
+    transform: scale(1.2);
+}
+
+section.sec_trabalhos h1{
+    margin: 20px auto 80px auto;
+    font-size: 1.8em;
+    border-left: 5px solid var(--corTema);
+    width: 320px;
+    text-transform: uppercase;
+}
+
+/*=========== FOOTER =============*/
+footer{
+    background-color: #23232f;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(125, 126, 127);
+}
+
+
+/* =========== media queries ============*/
+
+@media (max-width:700px){
+    #cont_btn {
+        display: flex;
+    }
+
+    #ul01 {
+        position: absolute;
+        right: 0;
+        top: 10vh;
+        background-color: #0f0f14;
+        height: 80vh;
+        width: 50vw;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        transform: translate(100%);
+        transition: 1s;
+        border-top: 2px solid var(--corTema);
+        z-index: 1;
+    }
+
+    li {
+
+        width: 100%;
+        height: 100%;
+    }
+    li a{
+        width: 100%;
+        height: 80%;
+        line-height: 100px;
+        font-size: 1.5em !important;
+
+        text-align: center;
+    }
+    header ul li a:hover{
+        box-shadow: 0px 0px 30px var(--corTema);
+    }
+
+    #btn:checked ~ #ul01 {
+        transform: translate(0);
+    }
+}
+
