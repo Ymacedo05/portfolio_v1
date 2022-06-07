@@ -3,6 +3,7 @@
 
 :root{
     --corTema:red;
+    --pretoAlter: #1D1D1D;
 }
 
 *{
@@ -19,6 +20,8 @@ img{
 
 body{
     overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
 }
 
 
@@ -26,6 +29,7 @@ body{
     width: 100vw;
     background-color: black;
     color: white;
+    margin: auto;
 }
 
 #btn{
@@ -144,12 +148,12 @@ div.outdoor p{
 /*============ Ínicio Main ==============*/
 
 main{
-    overflow: hidden;
-    -webkit-overflow-scrolling: hidden;
+    width: 100vw;
 }
 .sobreMim{
+    
     height: 510px;
-    padding: 5px;
+    padding-right: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -157,19 +161,27 @@ main{
 
 section #foto{
     height: 300px;
-    border: 2px dashed white;
+    border-top: 10px solid var(--corTema);
     border-left: 10px solid var(--corTema);
-    width: 200px;
+    width: 250px;
     margin-right: 15%;
 }
 
 section #texto_direita{
     width: 50%;
-    border: 2px dashed white;
+    padding-right: 7px;
 }
 
 #texto_direita h2, p{
     margin-bottom: 25px;
+}
+#texto_direita h2{
+    background-color: var(--pretoAlter);
+    padding: 7px;
+}
+#texto_direita p{
+    margin-bottom: 25px;
+    color: lightslategray;
 }
 
 div.separador{
@@ -177,11 +189,11 @@ div.separador{
     margin-bottom:15px;
     justify-content: space-between;
     width: 250px;
-    background-color: #23232f;
 }
 div.separador span{
     display: block;
     width: 160px;
+    color: lightslategray;
 }
 
 #texto_direita button{
@@ -192,6 +204,52 @@ div.separador span{
     font-weight: 800;
     margin-top: 7px;
 }
+/*========  TECNOLOGIAS =========*/
+
+.sec_tecnologias{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.sec_tecnologias h2{
+    border-left: 5px solid var(--corTema);
+    margin: 30px 0 75px 20px;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    padding-left: 20px;
+}
+
+.tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.tecnologias div{
+    margin: 15px;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    background-color: var(--pretoAlter);
+}
+
+.front-end{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.front-end h3{
+    color: var(--corTema);
+    margin-bottom: 20px;
+}
+
+.front-end ul li{
+    margin-bottom: 7px;
+}
+
 
 /*================  TRABALHOS  ===============*/
 
@@ -210,20 +268,26 @@ section.sec_trabalhos div.trabalhos{
 div.trabalhos div{
     width: 300px;
     height: 200px;
-    background-color: darkblue;
+    background-color: var(--pretoAlter);
     margin: 13px;
-    border: 10px solid rgb(227, 162, 162);
+    border-radius: 15px;
 }
+
+div.trabalhos div img {
+    border-radius: 15px;
+}
+
 div.trabalhos div:hover{
     transform: scale(1.2);
 }
 
-section.sec_trabalhos h1{
-    margin: 20px auto 80px auto;
+section.sec_trabalhos h2{
+    margin: 20px 0 80px 20px;
     font-size: 1.8em;
     border-left: 5px solid var(--corTema);
-    width: 320px;
     text-transform: uppercase;
+    text-align:left;
+    padding-left: 20px;
 }
 
 /*=========== FOOTER =============*/
@@ -252,6 +316,12 @@ footer{
         background-attachment: scroll;
     }
 
+    img{
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+    }
+
     #ul01 {
         background-color: #0f0f14;
         height: 71vh;
@@ -268,14 +338,14 @@ footer{
         transform: translateX(100%);
     }
 
-    li {
+    #ul01 li {
 
         width: 100%;
         height: 100%;
 
         display: flex;
     }
-    li a{
+    #ul01 li a{
         width: 50%;
         height: 60px;
         font-size: 1.5em !important;
@@ -311,6 +381,26 @@ footer{
     #btn:checked ~ label .d3{
         transform: rotate(45deg) translate(-4px, -7px);
         
+    }
+
+    .sobreMim{   
+        height: 810px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    section #foto{
+        height: 250px;
+        width: 300px !important;
+        border: none;
+        width: 250px;
+        margin: 10px auto 20px auto;
+    }
+    
+    section #texto_direita{
+        width: 80%;
+        padding-right: 7px;
     }
 
     
