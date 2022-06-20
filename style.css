@@ -6,23 +6,35 @@
     --pretoAlter: #1D1D1D;
 }
 
+@keyframes ponteiro {
+    0%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
+
 *{
     padding: 0px;
     margin: 0px;
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
+    
 }
 img{
     width: 100%;
     height: 100%;
 }
 
+
 body{
-    overflow-x: hidden;
     width: 100vw;
     height: 100vh;
     font-family: 'Courier New', Courier, monospace;
+    overflow-x: hidden;
 }
 
 
@@ -165,14 +177,14 @@ section.outdoor{
     position: relative;
 }
 
-section.outdoor div:before{
+section.outdoor:before{
     content: '';
     background-color: rgba(15, 15, 20, 0.563);
     top: 0;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     position: absolute;
-    z-index: -1;
+    z-index: 1;
     
 }
 
@@ -201,6 +213,19 @@ section.outdoor p{
     font-size: 1.4em;
     color: lightgray;
     margin-top: 25px;
+    position: relative;
+    height: 30px;
+}
+
+section.outdoor #alvo:after{
+    content: "|";
+    font-weight: 900;
+    font-size: 1.3em;
+    position: absolute;
+    right: -5px;
+    bottom: 0px;
+    color: var(--corTema);
+    animation: ponteiro 0.5s infinite;
 }
 
 /*============ Ínicio Main ==============*/
