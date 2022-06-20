@@ -22,6 +22,7 @@ body{
     overflow-x: hidden;
     width: 100vw;
     height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 
@@ -37,15 +38,24 @@ body{
 }
 #cont_btn{
     display: none;
-    width: 50px;
-    height: 35px;
+    width: 35px;
+    height: 30px;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 #cont_btn div{
     height: 5px;
     background-color: var(--corTema);
     transition: 0.5s;
+}
+
+header{
+    background: rgba(0, 0, 0, 0.401);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    
 }
 
 
@@ -64,7 +74,7 @@ header nav{
     text-align: center;
     line-height: 70px;
     color: var(--corTema);
-    font-size: 2.5em;
+    font-size: 2.7em;
 }
 
 header nav ul{
@@ -78,6 +88,8 @@ header ul li a{
     font-size: 1.5em;
     color: white;
     transition: color 0.5s;
+    border: 1px solid transparent;
+    
 }
 
 header ul li a:hover{
@@ -88,7 +100,7 @@ header ul li a:hover{
 
 /* =========== Ínicio Outdoor ==================*/
 
-header{
+/* header{
     background: url("imagens/fundo02.jpg") no-repeat center center;
     height: 90vh;
     background-size: cover;
@@ -116,7 +128,7 @@ header:before{
     position: absolute;
     
 
-} */
+} 
 
 div.outdoor{
     height:80% ;
@@ -141,9 +153,55 @@ div.outdoor p{
     font-size: 1.4em;
     color: lightgray;
     margin-top: 25px;
+} */
+
+/* ---------------------------- */
+
+section.outdoor{
+    background: url("imagens/fundo02.jpg") no-repeat center center;
+    height: 90vh;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+section.outdoor div:before{
+    content: '';
+    background-color: rgba(15, 15, 20, 0.563);
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: -1;
+    
 }
 
 
+section.outdoor div{
+    height:80% ;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+}
+
+section.outdoor h1{
+    font-size: 3.5em;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--corTema);
+    top: 34vh;
+    text-align: center;
+    line-height: 60px;
+}
+section.outdoor p{
+    font-size: 1.4em;
+    color: lightgray;
+    margin-top: 25px;
+}
 
 /*============ Ínicio Main ==============*/
 
@@ -227,13 +285,15 @@ div.separador span{
 
 .tecnologias div{
     margin: 15px;
-    width: 300px;
+    width: 40%;
+    max-width: 500px;
     height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
     background-color: var(--pretoAlter);
+    box-shadow: 5px 5px 13px #1a1a1a;
 }
 
 .front-end{
@@ -244,10 +304,19 @@ div.separador span{
 .front-end h3{
     color: var(--corTema);
     margin-bottom: 20px;
+    font-size: 1.3em;
+    
 }
 
 .front-end ul li{
     margin-bottom: 7px;
+    font-size: 1.1em;
+}
+
+.web-design h3{
+    color: var(--corTema);
+    margin-bottom: 20px;
+    font-size: 1.3em;
 }
 
 
@@ -306,7 +375,7 @@ footer{
 
 @media (max-width:700px){
 
-    html{
+    body{
         overflow-x: hidden;
     }
     #cont_btn {
@@ -324,11 +393,11 @@ footer{
 
     #ul01 {
         background-color: #0f0f14;
-        height: 71vh;
-        width: 50vw;
+        height: 86vh;
+        width: 70vw;
         flex-direction: column;
-        justify-content: space-evenly;
         align-items: center;
+        justify-content: center;
         transition: 0.5s;
         border-top: 2px solid var(--corTema);
         z-index: 1;
@@ -339,25 +408,34 @@ footer{
     }
 
     #ul01 li {
-
-        width: 100%;
-        height: 100%;
-
-        display: flex;
+        padding: 0 !important;
     }
     #ul01 li a{
-        width: 50%;
-        height: 60px;
+
         font-size: 1.5em !important;
         text-align: center;
         border-bottom: 1px solid var(--corTema);
-        margin: auto !important;
+        margin: 12px auto !important;
         line-height: 40px;
- 
+
+        position: relative;
+    }
+
+    #ul01 li a:after{
+        content: "";
+        position: absolute;
+        background-color: var(--corTema);
+        height: 4px;
+        width:100%;
+        bottom: 5px;
+        left: 0;
+        
     }
     header ul li a:hover{
-        box-shadow: 0px 0px 80px var(--corTema);
+        box-shadow: 0px 0px 80px 4px var(--corTema);
         border: none;
+        background-color: var(--corTema);
+        color: black;
     }
 
     header ul li a:active{
@@ -373,7 +451,7 @@ footer{
     }
 
     #btn:checked ~ label .d1{
-        transform: rotate(-45deg) translate(-15px, 17px)
+        transform: rotate(-45deg) translate(-8px, 10px)
     }
     #btn:checked ~ label .d2{
         opacity: 0;
