@@ -20,9 +20,9 @@ function digitar(x) {
 
     }
 
-    setInterval(function(){
+    setTimeout(function(){
         digitar('#alvo')
-    }, 7000)
+    },7000)
 
 
 }
