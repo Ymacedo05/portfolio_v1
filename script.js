@@ -24,4 +24,5 @@ function digitar(x) {
 
 }
 
+
 digitar('#alvo')

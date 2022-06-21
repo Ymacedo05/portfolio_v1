@@ -93,6 +93,7 @@ header nav ul{
     display: flex;
 }
 
+
 header ul li a{
     display: block;
     padding: 10px;
@@ -224,7 +225,6 @@ section.outdoor #alvo:after{
     font-weight: 900;
     font-size: 1.3em;
     color: var(--corTema);
-    margin-left: ;
     animation: ponteiro 0.5s infinite;
     margin-left: -5px;
 }
@@ -453,8 +453,9 @@ footer{
     #cont_btn {
         display: flex;
     }
-    header{
-        background-attachment: scroll;
+    section.outdoor{
+        /* background-attachment: scroll; */
+         background-size: auto; 
     }
 
     img{
@@ -469,7 +470,7 @@ footer{
         width: 70vw;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         transition: 0.5s;
         border-top: 2px solid var(--corTema);
         z-index: 1;
@@ -477,6 +478,7 @@ footer{
         right: 0;
         top: 12vh;
         transform: translateX(100%);
+        padding-top: 15%;
     }
 
     #ul01 li {
@@ -517,6 +519,8 @@ footer{
         border: none;
     }
 
+    
+
     #btn:checked ~ #ul01 {
         display: flex;
         transform: translateX(0%);
@@ -538,6 +542,10 @@ footer{
         padding: 0;
         display: flex;
         flex-direction: column;
+    }
+    .sobreMim .separador{
+
+        width: 90%;
     }
     
     section #foto{
