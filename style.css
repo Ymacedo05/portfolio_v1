@@ -226,7 +226,7 @@ section.outdoor #alvo:after{
     color: var(--corTema);
     margin-left: ;
     animation: ponteiro 0.5s infinite;
-    margin-left: -17px;
+    margin-left: -5px;
 }
 
 /*============ Ínicio Main ==============*/
