@@ -454,8 +454,8 @@ footer{
         display: flex;
     }
     section.outdoor{
-        /* background-attachment: scroll; */
-         background-size: auto; 
+     background-attachment: scroll;
+ 
     }
 
     img{
