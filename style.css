@@ -282,7 +282,7 @@ div.separador{
     display: flex;
     margin-bottom:15px;
     justify-content: space-between;
-    width: 250px;
+    width: 280px;
 }
 div.separador span{
     display: block;
@@ -546,6 +546,7 @@ footer{
     .sobreMim .separador{
 
         width: 90%;
+        max-width: 300px;
     }
     
     section #foto{
