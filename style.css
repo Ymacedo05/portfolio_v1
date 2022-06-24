@@ -433,7 +433,7 @@ section.sec_trabalhos h2{
 
 /*=========== FOOTER =============*/
 footer{
-    background-color: #23232f;
+    background-color: var(--pretoAlter);
     height: 200px;
     display: flex;
     align-items: center;
