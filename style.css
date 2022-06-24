@@ -431,6 +431,24 @@ section.sec_trabalhos h2{
     padding-left: 20px;
 }
 
+.emDesenvolvimento{
+    position: relative;
+
+}
+.emDesenvolvimento:after{
+    content: 'Em desenvolvimento';
+    background: darkblue;
+    color: rgb(148, 148, 148);
+    position: absolute;
+    width: 90%;
+    left: 15px;
+    top: 80px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 1.2em;
+    box-shadow: 3px 3px 10px rgb(8, 8, 35);
+}
+
 /*=========== FOOTER =============*/
 footer{
     background-color: var(--pretoAlter);
@@ -478,7 +496,7 @@ footer{
         right: 0;
         top: 12vh;
         transform: translateX(100%);
-        padding-top: 15%;
+        padding-top: 10%;
     }
 
     #ul01 li {
