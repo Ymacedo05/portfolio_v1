@@ -45,17 +45,15 @@ body{
     margin: auto;
 }
 
+
 #btn{
-    display: none;
-}
-#cont_btn{
     display: none;
     width: 35px;
     height: 30px;
     flex-direction: column;
     justify-content: space-around;
 }
-#cont_btn div{
+#btn div{
     height: 5px;
     background-color: var(--corTema);
     transition: 0.5s;
@@ -468,7 +466,7 @@ footer{
     body{
         overflow-x: hidden;
     }
-    #cont_btn {
+    #btn {
         display: flex;
     }
     section.outdoor{
@@ -482,6 +480,7 @@ footer{
         border-radius: 15px;
     }
 
+    
     #ul01 {
         background-color: #0f0f14;
         height: 86vh;
@@ -498,6 +497,7 @@ footer{
         transform: translateX(100%);
         padding-top: 10%;
     }
+
 
     #ul01 li {
         padding: 0 !important;
@@ -539,18 +539,18 @@ footer{
 
     
 
-    #btn:checked ~ #ul01 {
+    #nav.active  #ul01 {
         display: flex;
         transform: translateX(0%);
     }
 
-    #btn:checked ~ label .d1{
+    #nav.active .d1{
         transform: rotate(-45deg) translate(-8px, 10px)
     }
-    #btn:checked ~ label .d2{
+    #nav.active  .d2{
         opacity: 0;
     }
-    #btn:checked ~ label .d3{
+    #nav.active  .d3{
         transform: rotate(45deg) translate(-4px, -7px);
         
     }
@@ -678,5 +678,28 @@ footer{
     }
 
     
+}
+
+/* ========== Animação Scroll ======================*/
+
+[data-anime] {
+    opacity: 0;
+    transition: all 0.5s;
+}
+[data-anime].active {
+    opacity: 1;
+    transform: translate(0px, 0px);
+}
+[data-anime= 'right'] {
+    transform: translate(50px, 0px);
+}
+[data-anime= 'left'] {
+    transform: translate(-50px, 0px);
+}
+[data-anime= 'top'] {
+    transform: translate(0px, 50px);
+}
+[data-anime= 'bottom'] {
+    transform: translate(0px, -50px);
 }
 

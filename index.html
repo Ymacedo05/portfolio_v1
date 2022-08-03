@@ -14,41 +14,38 @@
     <div id="container">
 
         <header >
-            <nav>
+            <nav id="nav">
+                
                 <div class="logo">YM</div>
 
-                <input type="checkbox" id="btn">
-                <label for="btn">
+                <div id="btn" onclick="clickBTN()" >
+                    <div class="d1" ></div>
+                    <div class="d2" ></div>
+                    <div class="d3" ></div>
+                </div>
 
-                    <div id="cont_btn">
-                        <div class="d1"></div>
-                        <div class="d2"></div>
-                        <div class="d3"></div>
-                    </div>
-
-                </label>
 
                 <ul id="ul01">
                     <li>
-                        <a href="#home">
+                        <a href="#home" class="fechar">
                             Início
                         </a>
                     </li>
 
                     <li>
-                        <a href="#sobre">
+                        <a href="#sobre" class="fechar">
                             Sobre
                         </a>
                     </li>
 
                     <li>
-                        <a href="#conhecimentos">
+                        <a href="#conhecimentos" class="fechar">
                             Conhecimentos
                         </a>
                     </li>
 
                     <li>
-                        <a href="#projetos">
+                        <a href="#projetos" class="fechar">
                             Projetos
                         </a>
                     </li>
@@ -73,11 +70,11 @@
 
 
             <section class="sobreMim" id="sobre">
-                <div id="foto">
+                <div id="foto" data-anime = 'left'>
                     <img src="imagens/profile01.png" alt="">
                 </div>
 
-                <div id="texto_direita">
+                <div id="texto_direita" data-anime = 'right'>
                     <h2>Sobre mim</h2>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis esse voluptate et inventore quaerat nihil totam odio magnam veniam, quae labore, cum repellat accusantium, quis adipisci non. Necessitatibus, quisquam doloremque?
@@ -115,7 +112,7 @@
                 <h2>Conhecimentos</h2>
                 <div class="tecnologias">
 
-                    <div class="front-end">
+                    <div class="front-end" data-anime = 'left'>
                         <h3>Front-end</h3>
                         <ul class="ul-foront">
                             <li>HTML5</li>
@@ -125,7 +122,7 @@
                         </ul>
                     </div>
 
-                    <div class="web-design">
+                    <div class="web-design" data-anime = 'right'>
                         <h3>
                             Web-design
                         </h3>
@@ -138,41 +135,41 @@
                 <h2>Meus Projetos</h2>
 
                 <div class="trabalhos">
-                    <div class="d1">
+                    <div class="d1" data-anime = 'left'>
                         <a href="https://ymacedo05.github.io/calculadora/" target="_blank">
                             <img src="imagens/trabalho_calc.jpg" alt="">
                         </a>
                     </div>
-                    <div class="d2">
+                    <div class="d2" data-anime = 'right'>
                         <a href="https://ymacedo05.github.io/nft-preview-card-component-main/" target="_blank">
                             <img src="imagens/trabalho_nft.jpg" alt="">
                         </a>
                     </div>
-                    <div class="d3">
+                    <div class="d3" data-anime = 'left'>
                         <a href="https://ymacedo05.github.io/qr-code-component-main/" target="_blank">
                             <img src="imagens/trabalho_qr.jpg" alt="">
                         </a>
                     </div>
-                    <div class="d4">
+                    <div class="d4" data-anime = 'right'>
                         <a href="https://ymacedo05.github.io/App_Mata_Mosquito/">
                             <img src="imagens/trabalho_mata.jpg" alt="">
                         </a>
                     </div>
-                    <div class="d5">
+                    <div class="d5" data-anime = 'left'>
                         <a href="https://ymacedo05.github.io/Cronometro/" target="_blank">
 
                             <img src="imagens/cronometro.jpg" alt="">
                             
                         </a>
                     </div>
-                    <div class="d6">
+                    <div class="d6" data-anime = 'right'>
                         <a href="https://ymacedo05.github.io/Relogio_v1/" target="_blank">
                             <img src="imagens/relogio.jpg" alt="">
                         </a>
                         
                     </div>
-                    <div class="d7 emDesenvolvimento"></div>
-                    <div class="d8 emDesenvolvimento"></div>
+                    <div class="d7 emDesenvolvimento" data-anime = 'left'></div>
+                    <div class="d8 emDesenvolvimento" data-anime = 'right'></div>
                 </div>
 
             </section>
